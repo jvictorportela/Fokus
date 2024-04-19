@@ -15,12 +15,12 @@ const imagePlay = new Image('/imagens/play_arrow.png');
 const imagePause = new Image('/imagens/pause.png');
 
 //Áudios
-const somFimTemporizador = new Audio('/sons/beep.mp3');
-const somPlayTemporizador = new Audio('/sons/play.wav');
-const somPauseTemporizador = new Audio('/sons/pause.mp3');
+const somFimTemporizador = new Audio('/audios/beep.mp3');
+const somPlayTemporizador = new Audio('/audios/play.wav');
+const somPauseTemporizador = new Audio('/audios/pause.mp3');
 
 const musicaFocoInput = document.querySelector('#alternar-musica');
-const musica = new Audio('/sons/luna-rise-part-one.mp3');
+const musica = new Audio('/audios/luna-rise-part-one.mp3');
 
 let intervaloId = null;
 let tempoDecorridoEmSegundos = 1500;
