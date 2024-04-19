@@ -44,4 +44,4 @@ Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](
 
 ---
 
-© 2024 Fokus. Desenvolvido por [João Victor Portela](https://github.com/seu-usuario).
+© 2024 Fokus. Desenvolvido por [João Victor Portela](https://github.com/jvictorportela).
