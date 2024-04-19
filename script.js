@@ -11,16 +11,16 @@ const tempoNaTela = document.querySelector('#timer');
 
 //images
 const startPauseIcon = document.querySelector('.app__card-primary-butto-icon');
-const imagePlay = new Image('/images/play_arrow.png');
-const imagePause = new Image('/images/pause.png');
+const imagePlay = new Image('./images/play_arrow.png');
+const imagePause = new Image('./images/pause.png');
 
 //Áudios
-const somFimTemporizador = new Audio('/audios/beep.mp3');
-const somPlayTemporizador = new Audio('/audios/play.wav');
-const somPauseTemporizador = new Audio('/audios/pause.mp3');
+const somFimTemporizador = new Audio('./audios/beep.mp3');
+const somPlayTemporizador = new Audio('./audios/play.wav');
+const somPauseTemporizador = new Audio('./audios/pause.mp3');
 
 const musicaFocoInput = document.querySelector('#alternar-musica');
-const musica = new Audio('/audios/luna-rise-part-one.mp3');
+const musica = new Audio('./audios/luna-rise-part-one.mp3');
 
 let intervaloId = null;
 let tempoDecorridoEmSegundos = 1500;
@@ -60,7 +60,7 @@ function alterarContexto(contexto) {
         contexto.classList.remove('active')
     })
     html.setAttribute('data-contexto', contexto);
-    banner.setAttribute('src', `/images/${contexto}.png`);
+    banner.setAttribute('src', `./images/${contexto}.png`);
 
     switch (contexto) {
         case "foco":
@@ -96,21 +96,21 @@ function iniciarOuPausar() {
     if (intervaloId) {
         somPauseTemporizador.play();
         zerar();
-        startPauseIcon.src = '/images/play_arrow.png'; // Altera o ícone para o ícone de play
+        startPauseIcon.src = './images/play_arrow.png'; // Altera o ícone para o ícone de play
         return;
     }
     somPlayTemporizador.play();
     intervaloId = setInterval(contagemRegressiva, 1000);
 
     iniciarOuPausarBt.textContent = "Pausar";
-    startPauseIcon.src = '/images/pause.png'; // Altera o ícone para o ícone de pause
+    startPauseIcon.src = './images/pause.png'; // Altera o ícone para o ícone de pause
 }
 
 function zerar() {
     clearInterval(intervaloId);
     iniciarOuPausarBt.textContent = "Começar";
     intervaloId = null;
-    startPauseIcon.src = '/images/play_arrow.png';
+    startPauseIcon.src = './images/play_arrow.png';
 }
 
 function mostarTempo() {
