@@ -9,10 +9,10 @@ const iniciarOuPausarBt = document.querySelector('#start-pause span');
 const startPauseBt = document.querySelector('#start-pause');
 const tempoNaTela = document.querySelector('#timer');
 
-//Imagens
+//images
 const startPauseIcon = document.querySelector('.app__card-primary-butto-icon');
-const imagePlay = new Image('/imagens/play_arrow.png');
-const imagePause = new Image('/imagens/pause.png');
+const imagePlay = new Image('/images/play_arrow.png');
+const imagePause = new Image('/images/pause.png');
 
 //Áudios
 const somFimTemporizador = new Audio('/audios/beep.mp3');
@@ -60,7 +60,7 @@ function alterarContexto(contexto) {
         contexto.classList.remove('active')
     })
     html.setAttribute('data-contexto', contexto);
-    banner.setAttribute('src', `/imagens/${contexto}.png`);
+    banner.setAttribute('src', `/images/${contexto}.png`);
 
     switch (contexto) {
         case "foco":
@@ -96,21 +96,21 @@ function iniciarOuPausar() {
     if (intervaloId) {
         somPauseTemporizador.play();
         zerar();
-        startPauseIcon.src = '/imagens/play_arrow.png'; // Altera o ícone para o ícone de play
+        startPauseIcon.src = '/images/play_arrow.png'; // Altera o ícone para o ícone de play
         return;
     }
     somPlayTemporizador.play();
     intervaloId = setInterval(contagemRegressiva, 1000);
 
     iniciarOuPausarBt.textContent = "Pausar";
-    startPauseIcon.src = '/imagens/pause.png'; // Altera o ícone para o ícone de pause
+    startPauseIcon.src = '/images/pause.png'; // Altera o ícone para o ícone de pause
 }
 
 function zerar() {
     clearInterval(intervaloId);
     iniciarOuPausarBt.textContent = "Começar";
     intervaloId = null;
-    startPauseIcon.src = '/imagens/play_arrow.png';
+    startPauseIcon.src = '/images/play_arrow.png';
 }
 
 function mostarTempo() {
