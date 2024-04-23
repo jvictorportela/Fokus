@@ -14,6 +14,8 @@ Fokus é um aplicativo de gerenciamento de tempo baseado na técnica de Pomodoro
 
 - **Música de Fundo:** Você pode optar por tocar música de fundo durante seus ciclos de trabalho para criar um ambiente de trabalho mais agradável e focado.
 
+- **Cadastro e Manipulação de Tarefas:** Agora você pode cadastrar tarefas no Fokus e manipulá-las conforme concluídas. Isso inclui adicionar novas tarefas, marcar tarefas como concluídas e remover tarefas da lista.
+
 ## Como Usar
 
 1. Escolha o contexto de trabalho clicando nos botões correspondentes na seção "Contexto" do aplicativo.
